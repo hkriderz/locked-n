@@ -1,36 +1,191 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Locked N - Premium Sports Facility Website
+
+A modern, responsive website for Locked N, a premium sports facility offering state-of-the-art shooting machines, high-end training, academies, and tournaments.
+
+## Features
+
+### 🏟️ **Core Pages**
+- **Home Page**: Hero section, facility highlights, testimonials, and CTAs
+- **About Page**: Company background, mission, values, team, and facility gallery
+- **Services Page**: Detailed service offerings with pricing previews
+- **Booking Page**: Multi-step booking form with service selection
+- **Pricing Page**: Transparent pricing tables and comparison charts
+- **Contact Page**: Contact form, location info, and interactive map
+- **Client Portal**: Placeholder for future member dashboard
+
+### 🎨 **Design & UX**
+- Modern, responsive design with mobile-first approach
+- Smooth animations and transitions using Framer Motion
+- Professional color scheme and typography
+- Interactive components and hover effects
+- Accessibility-focused design patterns
+
+### 🚀 **Technical Features**
+- Built with Next.js 15 and React 19
+- TypeScript for type safety
+- Tailwind CSS for styling
+- Form validation with React Hook Form and Zod
+- SEO optimization with metadata and schema markup
+- Performance optimized with lazy loading
+
+### 📱 **Responsive Design**
+- Mobile-first responsive layout
+- Optimized for all screen sizes
+- Touch-friendly interface elements
+- Fast loading times
+
+## Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Forms**: React Hook Form + Zod validation
+- **Icons**: Lucide React
+- **UI Components**: Custom components with Radix UI primitives
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
 
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd locked-n
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Start the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── about/             # About page
+│   ├── booking/           # Booking page
+│   ├── contact/           # Contact page
+│   ├── pricing/           # Pricing page
+│   ├── portal/            # Client portal placeholder
+│   ├── services/          # Services page
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── components/            # Reusable components
+│   ├── sections/          # Page sections
+│   ├── seo/              # SEO components
+│   ├── ui/               # UI components
+│   ├── Footer.tsx        # Site footer
+│   └── Header.tsx        # Site header
+└── lib/                  # Utility functions
+    └── utils.ts          # Helper functions
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Key Components
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Pages
+- **Home**: HeroSection, FacilityHighlights, ServicesPreview, TestimonialsSection, CTASection
+- **About**: MissionSection, ValuesSection, FacilityGallery, TeamSection
+- **Services**: DetailedServices, PricingPreview, ServiceFAQ
+- **Booking**: BookingSteps, BookingForm, BookingFAQ
+- **Pricing**: PricingTables, PricingComparison, PricingFAQ
+- **Contact**: ContactInfo, ContactForm, MapSection
 
-## Deploy on Vercel
+### Features
+- **SEO**: LocalBusinessSchema, metadata optimization
+- **Forms**: Multi-step booking form with validation
+- **Animations**: Scroll-triggered animations with Intersection Observer
+- **Responsive**: Mobile-first design with Tailwind CSS
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Colors
+The color scheme can be customized in `tailwind.config.ts`:
+- Primary: Blue theme
+- Secondary: Gray tones
+- Accent: Green for success states
+
+### Content
+- Update company information in components
+- Modify pricing in pricing components
+- Customize contact information in Header and Footer
+- Update social media links
+
+### Styling
+- Modify Tailwind classes in components
+- Update CSS variables in `globals.css`
+- Customize animations in Framer Motion components
+
+## Deployment
+
+### Vercel (Recommended)
+1. Push code to GitHub
+2. Connect repository to Vercel
+3. Deploy automatically
+
+### Other Platforms
+1. Build the project: `npm run build`
+2. Start production server: `npm start`
+
+## Environment Variables
+
+Create a `.env.local` file for environment-specific variables:
+
+```env
+# Analytics
+NEXT_PUBLIC_GA_ID=your_google_analytics_id
+NEXT_PUBLIC_CRISP_WEBSITE_ID=your_crisp_id
+
+# Contact Form
+CONTACT_FORM_ENDPOINT=your_form_endpoint
+```
+
+## Future Enhancements
+
+### Planned Features
+- **Client Portal**: Full member dashboard with booking management
+- **UpperHand Integration**: Real booking system integration
+- **Payment Processing**: Stripe or similar payment integration
+- **Email Notifications**: Automated booking confirmations
+- **Admin Dashboard**: Facility management system
+- **Mobile App**: React Native companion app
+
+### SEO Improvements
+- Blog section for content marketing
+- Local SEO optimization
+- Schema markup enhancements
+- Performance monitoring
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## License
+
+This project is proprietary to Locked N Sports Facility.
+
+## Support
+
+For technical support or questions:
+- Email: info@lockedn.com
+- Phone: (555) 123-4567
+
+---
+
+**Built with ❤️ for Locked N Sports Facility**

@@ -1,0 +1,27 @@
+---
+description: Refactoring and cleanup of code
+alwaysApply: false
+---
+Cursor Rules: Refactoring & Cleanup
+
+Keep code readable, maintainable, and consistent.
+
+Remove unused imports, variables, functions, components, and files.
+
+Delete console logs and commented-out code (unless marked TODO).
+
+Break down large functions/components into smaller reusable ones.
+
+Use descriptive names and avoid duplicate logic.
+
+Replace magic numbers with constants.
+
+Simplify nested logic with early returns.
+
+Ensure Tree-shaking friendly imports and minimal Tailwind class duplication.
+
+Run TypeScript checks + ESLint/Prettier after refactoring.
+
+Check for any Type Errors.
+
+Make small, focused commits with refactor: prefix.
