@@ -51,10 +51,10 @@ export function Header() {
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center">
-                <div className="h-10 w-10 bg-primary rounded-lg flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-xl">LN</span>
+                <div className="h-10 w-10 bg-[#F37C07] rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">L'N</span>
                 </div>
-                <span className="ml-3 text-2xl font-bold text-gray-900">Locked N</span>
+                <span className="ml-3 text-2xl font-bold text-gray-900">Locked 'N</span>
               </Link>
             </div>
 

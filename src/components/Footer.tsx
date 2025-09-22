@@ -43,14 +43,14 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-4">
-              <div className="h-10 w-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">LN</span>
+              <div className="h-10 w-10 bg-[#F37C07] rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">L'N</span>
               </div>
-              <span className="ml-3 text-2xl font-bold">Locked N</span>
+              <span className="ml-3 text-2xl font-bold">Locked 'N</span>
             </div>
             <p className="text-gray-300 mb-4">
-              Premium sports facility offering state-of-the-art shooting machines, 
-              high-end training, academies, and tournaments.
+              Premier Basketball Training and Shooting Lab equipped with state-of-the-art Dr. Dish C+ shooting machines. 
+              Basketball and Volleyball gym rentals, plus private training sessions. Locked N Powered by Gyfted.
             </p>
             <div className="space-y-2">
               <div className="flex items-center text-gray-300">

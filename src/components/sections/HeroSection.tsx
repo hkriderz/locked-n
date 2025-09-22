@@ -30,9 +30,9 @@ export function HeroSection() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
               >
-                Premium Sports
-                <span className="block text-primary">Facility</span>
-                <span className="block">Experience</span>
+                Premier Basketball
+                <span className="block text-[#F37C07]">Training and</span>
+                <span className="block">Shooting Lab</span>
               </motion.h1>
               
               <motion.p
@@ -41,8 +41,16 @@ export function HeroSection() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-xl text-gray-300 max-w-2xl"
               >
-                State-of-the-art shooting machines, high-end training programs, 
-                youth academies, and competitive tournaments. Book your session today.
+                Welcome to Locked 'N Shooting Facility! We offer a top-notch Basketball Shooting Lab equipped with state-of-the-art Dr. Dish C+ shooting machines. Our services also include Basketball and Volleyball gym rentals, as well as private training sessions.
+              </motion.p>
+              
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="text-lg text-white font-semibold italic"
+              >
+                Stay focused, stay dedicated, stay Locked 'N!
               </motion.p>
             </div>
 
@@ -75,16 +83,16 @@ export function HeroSection() {
               className="grid grid-cols-3 gap-8 pt-8"
             >
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">500+</div>
-                <div className="text-sm text-gray-300">Happy Clients</div>
+                <div className="text-3xl font-bold text-[#F37C07]">$45</div>
+                <div className="text-sm text-gray-300">Starting Price/Hour</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">50+</div>
-                <div className="text-sm text-gray-300">Tournaments</div>
+                <div className="text-3xl font-bold text-[#F37C07]">2</div>
+                <div className="text-sm text-gray-300">Dr. Dish C+ Machines</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">24/7</div>
-                <div className="text-sm text-gray-300">Facility Access</div>
+                <div className="text-3xl font-bold text-[#F37C07]">Pro</div>
+                <div className="text-sm text-gray-300">Grade Equipment</div>
               </div>
             </motion.div>
           </motion.div>
@@ -114,7 +122,7 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 1 }}
               className="absolute -bottom-6 -left-6 bg-white text-gray-900 p-4 rounded-lg shadow-lg"
             >
-              <div className="text-sm font-semibold">State-of-the-Art</div>
+              <div className="text-sm font-semibold">Dr. Dish C+</div>
               <div className="text-xs text-gray-600">Shooting Machines</div>
             </motion.div>
             
@@ -122,10 +130,10 @@ export function HeroSection() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 1.2 }}
-              className="absolute -top-6 -right-6 bg-primary text-primary-foreground p-4 rounded-lg shadow-lg"
+              className="absolute -top-6 -right-6 bg-[#F37C07] text-white p-4 rounded-lg shadow-lg"
             >
-              <div className="text-sm font-semibold">Professional</div>
-              <div className="text-xs opacity-90">Training</div>
+              <div className="text-sm font-semibold">GYFTED</div>
+              <div className="text-xs opacity-90">Powered</div>
             </motion.div>
           </motion.div>
         </div>

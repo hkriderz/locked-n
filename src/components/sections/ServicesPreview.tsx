@@ -9,29 +9,29 @@ import { Calendar, Users, Trophy, ArrowRight } from "lucide-react";
 const services = [
   {
     icon: Calendar,
-    title: "Gym Rentals",
-    description: "Flexible hourly and daily rentals for individuals and groups. Perfect for training sessions, events, and practice.",
-    features: ["Hourly & Daily Rates", "Group Discounts", "Equipment Included", "Flexible Scheduling"],
-    price: "Starting at $25/hour",
-    href: "/services#gym-rentals",
+    title: "Dr. Dish C+ Shooting Lab",
+    description: "Professional-grade shooting machines used by elite teams worldwide. Maximize your shooting reps with our state-of-the-art equipment.",
+    features: ["2 Dr. Dish C+ Machines", "Professional Grade", "Hourly Sessions", "Up to 4 Shooters"],
+    price: "Starting at $45/hour",
+    href: "/services#shooting-lab",
     color: "blue",
   },
   {
     icon: Users,
-    title: "Training Programs",
-    description: "Professional coaching and personalized training programs for all skill levels and age groups.",
-    features: ["Personal Training", "Group Classes", "Youth Programs", "Skill Development"],
-    price: "Starting at $50/session",
-    href: "/services#training",
+    title: "Gym Rentals",
+    description: "Basketball and Volleyball gym rentals for individuals and groups. Perfect for training sessions, events, and practice.",
+    features: ["Basketball Courts", "Volleyball Courts", "Flexible Scheduling", "Group Discounts"],
+    price: "Rates vary by sport",
+    href: "/services#gym-rentals",
     color: "green",
   },
   {
     icon: Trophy,
-    title: "Tournaments & Events",
-    description: "Competitive tournaments, leagues, and special events throughout the year with prizes and recognition.",
-    features: ["Monthly Tournaments", "Seasonal Leagues", "Championship Events", "Prize Pools"],
-    price: "Entry fees vary",
-    href: "/services#tournaments",
+    title: "Private Training",
+    description: "Personalized training sessions with Coach Chris and the GYFTED Hoops Academy team. Focus on confidence, discipline, and mentorship.",
+    features: ["Personal Training", "Skill Development", "Confidence Building", "Mentorship"],
+    price: "Contact for rates",
+    href: "/services#training",
     color: "purple",
   },
 ];
@@ -73,11 +73,11 @@ export function ServicesPreview() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Our Services
+            Locked 'N Shooting Lab
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive sports facility services designed to meet all your training, 
-            competition, and recreational needs.
+            Our Locked 'N Shooting Lab offers two "shooting machines" with Dr. Dish C+ shooting machines to maximize shooting reps. 
+            These machines are the same machines used, tested, and trusted by professional teams, elite schools, basketball clubs, and trainers worldwide.
           </p>
         </motion.div>
 

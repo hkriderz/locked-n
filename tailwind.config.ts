@@ -22,9 +22,11 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#F37C07", // Locked N Orange
+          foreground: "#FFFFFF",
         },
+        "locked-orange": "#F37C07",
+        "locked-dark": "#2D2E2D",
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",

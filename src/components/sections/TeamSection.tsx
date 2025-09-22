@@ -6,32 +6,11 @@ import { Award, Users, Star } from "lucide-react";
 
 const teamMembers = [
   {
-    name: "Sarah Mitchell",
-    role: "Head Coach & Facility Director",
-    bio: "Former professional athlete with 15+ years of coaching experience. Specializes in youth development and competitive training.",
-    image: "👩‍💼",
-    certifications: ["Certified Sports Coach", "Youth Development Specialist", "Safety Instructor"],
-  },
-  {
-    name: "Mike Rodriguez",
-    role: "Senior Training Coordinator",
-    bio: "Expert in equipment maintenance and training program development. Passionate about helping athletes reach their potential.",
-    image: "👨‍🔧",
-    certifications: ["Equipment Specialist", "Training Coordinator", "First Aid Certified"],
-  },
-  {
-    name: "Emily Chen",
-    role: "Youth Academy Director",
-    bio: "Dedicated to creating safe, fun, and educational experiences for young athletes. Background in child development and sports psychology.",
-    image: "👩‍🏫",
-    certifications: ["Child Development", "Sports Psychology", "Youth Safety"],
-  },
-  {
-    name: "David Thompson",
-    role: "Tournament Coordinator",
-    bio: "Organizes and manages all competitive events. Former tournament director with extensive experience in event planning.",
-    image: "👨‍💼",
-    certifications: ["Event Management", "Tournament Director", "Sports Administration"],
+    name: "Coach Chris",
+    role: "Founder & Head Trainer",
+    bio: "Coach Chris is the founder and head trainer of GYFTED Hoops Academy, a program dedicated to helping players elevate their basketball skills. With a focus on building confidence, discipline, and mentorship, Coach Chris develops athletes both on and off the court, empowering them to reach their full potential in the game and in life.",
+    image: "🏀",
+    certifications: ["GYFTED Hoops Academy", "Basketball Training", "Youth Development", "Mentorship"],
   },
 ];
 
@@ -51,22 +30,22 @@ export function TeamSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Meet Our Team
+            Meet the Team
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our experienced and passionate team is dedicated to providing the best 
-            possible experience for every athlete who walks through our doors.
+            Our experienced and passionate team is dedicated to helping players elevate their basketball skills 
+            through confidence, discipline, and mentorship.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="flex justify-center mb-16">
           {teamMembers.map((member, index) => (
             <motion.div
               key={member.name}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center max-w-md"
             >
               <div className="text-6xl mb-4">{member.image}</div>
               
