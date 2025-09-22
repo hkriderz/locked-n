@@ -10,12 +10,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Locked N - Premium Sports Facility & Training Academy",
-  description: "State-of-the-art shooting machines, high-end training, academies, and tournaments. Book gym rentals and training sessions at Locked N.",
-  keywords: "sports facility, gym rental, shooting machines, training academy, tournaments, recreational sports",
-  authors: [{ name: "Locked N" }],
-  creator: "Locked N",
-  publisher: "Locked N",
+  title: "Locked 'N - Premier Basketball Training and Shooting Lab",
+  description: "Premier Basketball Training and Shooting Lab equipped with state-of-the-art Dr. Dish C+ shooting machines. Basketball and Volleyball gym rentals, plus private training sessions.",
+  keywords: "basketball training, shooting lab, Dr. Dish C+, gym rental, volleyball, GYFTED Hoops Academy, Coach Chris",
+  authors: [{ name: "Locked 'N" }],
+  creator: "Locked 'N",
+  publisher: "Locked 'N",
   formatDetection: {
     email: false,
     address: false,
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Locked N - Premium Sports Facility & Training Academy",
-    description: "State-of-the-art shooting machines, high-end training, academies, and tournaments.",
+    title: "Locked 'N - Premier Basketball Training and Shooting Lab",
+    description: "Premier Basketball Training and Shooting Lab equipped with state-of-the-art Dr. Dish C+ shooting machines.",
     url: "https://lockedn.com",
     siteName: "Locked N",
     images: [

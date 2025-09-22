@@ -22,10 +22,7 @@ export function LocalBusinessSchema() {
       "latitude": "40.7128",
       "longitude": "-74.0060"
     },
-    "openingHours": [
-      "Mo-Fr 06:00-22:00",
-      "Sa-Su 08:00-20:00"
-    ],
+    "openingHours": "By appointment only",
     "priceRange": "$$",
     "paymentAccepted": ["Cash", "Credit Card", "Debit Card"],
     "currenciesAccepted": "USD",
@@ -37,24 +34,40 @@ export function LocalBusinessSchema() {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Gym Rentals",
-            "description": "Flexible hourly and daily rentals for individuals and groups"
+            "name": "Court Rentals",
+            "description": "Full and half court rentals for basketball and volleyball"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Training Programs",
-            "description": "Professional coaching and personalized training programs"
+            "name": "Dr. Dish Training",
+            "description": "State-of-the-art Dr. Dish CT+ shooting machines for up to 4 shooters"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Tournaments",
-            "description": "Competitive tournaments and leagues for all skill levels"
+            "name": "Private Training",
+            "description": "One-on-one training sessions with Coach Chris"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Volleyball Rentals",
+            "description": "Practice court rentals and game rentals for volleyball"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Game Rentals",
+            "description": "Extended game rentals for basketball and volleyball"
           }
         }
       ]
@@ -136,6 +149,7 @@ export function LocalBusinessSchema() {
     />
   );
 }
+
 
 
 

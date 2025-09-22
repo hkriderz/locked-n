@@ -8,35 +8,35 @@ import { ChevronDown, ChevronUp, Calculator, CreditCard, Gift } from "lucide-rea
 const faqs = [
   {
     question: "Are there any hidden fees?",
-    answer: "No, our pricing is completely transparent. The price you see is the price you pay. All equipment, safety gear, and basic services are included in the listed prices."
+    answer: "No, our pricing is completely transparent. The price you see is the price you pay. All equipment, court access, and basic services are included in the listed prices."
   },
   {
-    question: "Do you offer payment plans?",
-    answer: "Yes, we offer flexible payment plans for monthly packages. You can split your payment into 2-3 installments. Contact us to discuss payment plan options."
+    question: "How do I book a session?",
+    answer: "All sessions are by appointment only. You can book online 24/7 through our booking system, or contact us at 909-287-1268 to schedule your session."
   },
   {
-    question: "Can I upgrade or downgrade my plan?",
-    answer: "Absolutely! You can upgrade or downgrade your plan at any time. Changes will be prorated based on your current billing cycle and the new plan pricing."
+    question: "What's included with Dr. Dish training?",
+    answer: "Dr. Dish CT+ sessions include access to state-of-the-art shooting machines, real-time feedback technology, and all necessary training equipment. Sessions can accommodate up to 4 shooters."
   },
   {
-    question: "What discounts are available?",
-    answer: "We offer several discounts: 20% off for groups of 10+, 15% off for students with valid ID, 20% off for military personnel, and 10% off for seniors (65+)."
+    question: "Can I rent just the court without equipment?",
+    answer: "Yes! We offer court-only rentals for basketball and volleyball. All court equipment (balls, nets, etc.) is included with your rental at no extra cost."
   },
   {
-    question: "Is there a cancellation fee?",
-    answer: "No cancellation fees for monthly plans. You can cancel anytime with 30 days notice. For prepaid packages, unused sessions are refunded at the daily rate."
+    question: "What's the difference between practice and game rentals?",
+    answer: "Practice rentals are 1-2 hours for training and skill development. Game rentals are 2.5 hours for extended play sessions and competitive games."
   },
   {
-    question: "Do you offer family packages?",
-    answer: "Yes! We have special family packages that provide significant savings for families with multiple members. Contact us for custom family pricing."
+    question: "Is private training with Coach Chris available?",
+    answer: "Yes! Coach Chris offers one-on-one private training sessions for $225/hour. These include personalized coaching, skill development, and progress tracking."
   },
   {
-    question: "What's included in the equipment rental?",
-    answer: "All basic training equipment is included: shooting machines, targets, safety gear, and training aids. Specialized equipment may be available for an additional fee."
+    question: "Do you offer group discounts?",
+    answer: "We offer competitive pricing for groups and teams. Contact us at 909-287-1268 or info@lockedninc.com to discuss group rates and special packages."
   },
   {
-    question: "Can I pause my membership?",
-    answer: "Yes, you can pause your membership for up to 3 months per year. This is perfect for vacations, injuries, or other temporary situations."
+    question: "What's your cancellation policy?",
+    answer: "We require 24-hour notice for cancellations. Same-day cancellations may be subject to a 50% charge. Rescheduling is free with proper notice."
   }
 ];
 
@@ -65,7 +65,7 @@ export function PricingFAQ() {
             Pricing Questions?
           </h2>
           <p className="text-xl text-gray-600">
-            Find answers to common questions about our pricing, discounts, and payment options.
+            Find answers to common questions about our services, booking process, and pricing options.
           </p>
         </motion.div>
 
@@ -121,14 +121,14 @@ export function PricingFAQ() {
               <Calculator className="h-8 w-8 text-blue-600" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Price Calculator
+              Book Online
             </h3>
             <p className="text-gray-600 text-sm mb-4">
-              Calculate the cost of your training based on frequency and duration.
+              Choose from 13 available options and book your session online anytime.
             </p>
-            <button className="text-primary font-semibold hover:underline">
-              Calculate Now
-            </button>
+            <a href="/booking" className="text-primary font-semibold hover:underline">
+              Book Now
+            </a>
           </div>
 
           <div className="bg-gray-50 rounded-xl p-6 text-center">
@@ -136,14 +136,14 @@ export function PricingFAQ() {
               <CreditCard className="h-8 w-8 text-green-600" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Payment Options
+              Contact Us
             </h3>
             <p className="text-gray-600 text-sm mb-4">
-              Learn about our flexible payment methods and installment plans.
+              Have questions? Call us at 909-287-1268 or email info@lockedninc.com.
             </p>
-            <button className="text-primary font-semibold hover:underline">
-              View Options
-            </button>
+            <a href="/contact" className="text-primary font-semibold hover:underline">
+              Contact Now
+            </a>
           </div>
 
           <div className="bg-gray-50 rounded-xl p-6 text-center">
@@ -151,14 +151,14 @@ export function PricingFAQ() {
               <Gift className="h-8 w-8 text-purple-600" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Special Offers
+              Our Services
             </h3>
             <p className="text-gray-600 text-sm mb-4">
-              Check out our current promotions and limited-time offers.
+              Explore our 13 booking options including court rentals, Dr. Dish training, and private coaching.
             </p>
-            <button className="text-primary font-semibold hover:underline">
-              View Offers
-            </button>
+            <a href="/services" className="text-primary font-semibold hover:underline">
+              View Services
+            </a>
           </div>
         </motion.div>
 
@@ -171,21 +171,21 @@ export function PricingFAQ() {
         >
           <div className="bg-primary text-white rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4">
-              Need Custom Pricing?
+              Ready to Book?
             </h3>
             <p className="text-lg opacity-90 mb-6">
-              We offer custom pricing for corporate groups, large teams, and special events. 
-              Contact us to discuss your specific needs and get a personalized quote.
+              Choose from 13 available booking options. All sessions are by appointment only. 
+              Book online anytime or contact us for assistance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:(555)123-4567"
+                href="tel:909-287-1268"
                 className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Call (555) 123-4567
+                Call 909-287-1268
               </a>
               <a
-                href="mailto:info@lockedn.com"
+                href="mailto:info@lockedninc.com"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors"
               >
                 Email Us
@@ -197,6 +197,7 @@ export function PricingFAQ() {
     </section>
   );
 }
+
 
 
 

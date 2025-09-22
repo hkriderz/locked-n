@@ -5,8 +5,8 @@ import { ServiceFAQ } from "@/components/ServiceFAQ";
 
 export const metadata: Metadata = {
   title: "Services - Locked N Sports Facility",
-  description: "Comprehensive sports services including gym rentals, training programs, youth academy, and tournaments. Professional coaching and state-of-the-art equipment.",
-  keywords: "sports services, gym rental, training programs, youth academy, tournaments, professional coaching",
+  description: "Court rentals, Dr. Dish training, private coaching, and volleyball rentals. State-of-the-art basketball and volleyball facilities with professional equipment.",
+  keywords: "court rentals, Dr. Dish training, private coaching, volleyball rentals, basketball training, sports facility",
 };
 
 export default function Services() {
@@ -18,6 +18,7 @@ export default function Services() {
     </>
   );
 }
+
 
 
 

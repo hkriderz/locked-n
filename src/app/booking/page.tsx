@@ -5,8 +5,8 @@ import { BookingFAQ } from "@/components/BookingFAQ";
 
 export const metadata: Metadata = {
   title: "Book Now - Locked N Sports Facility",
-  description: "Book your training session, gym rental, or tournament at Locked N. Easy online booking with flexible scheduling and instant confirmation.",
-  keywords: "book now, online booking, gym rental booking, training session booking, sports facility booking",
+  description: "Book court rentals, Dr. Dish training, private coaching, and volleyball sessions. Easy online booking with 13 available options for basketball and volleyball.",
+  keywords: "book now, court rental booking, Dr. Dish training booking, private coaching booking, volleyball rental booking, sports facility booking",
 };
 
 export default function Booking() {
@@ -18,6 +18,7 @@ export default function Booking() {
     </>
   );
 }
+
 
 
 

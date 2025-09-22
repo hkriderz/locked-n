@@ -6,28 +6,28 @@ import { Camera, MapPin, Clock } from "lucide-react";
 
 const galleryItems = [
   {
-    title: "Main Training Area",
-    description: "Spacious facility with state-of-the-art shooting machines and professional-grade equipment.",
-    image: "🏟️",
-    features: ["Professional Equipment", "Climate Controlled", "Safety Protocols"],
+    title: "Basketball Courts",
+    description: "Full and half court basketball rentals with professional-grade flooring and equipment.",
+    image: "🏀",
+    features: ["Full Court Rentals", "Half Court Rentals", "Professional Equipment"],
   },
   {
-    title: "Youth Academy Space",
-    description: "Dedicated area designed specifically for our youth programs and training sessions.",
-    image: "👨‍👩‍👧‍👦",
-    features: ["Age-Appropriate Equipment", "Supervised Training", "Skill Development"],
+    title: "Dr. Dish CT+ Training",
+    description: "State-of-the-art Dr. Dish CT+ shooting machines for advanced basketball training.",
+    image: "🎯",
+    features: ["Up to 4 Shooters", "Advanced Technology", "Performance Tracking"],
   },
   {
-    title: "Tournament Arena",
-    description: "Competition-ready space for tournaments, leagues, and special events.",
-    image: "🏆",
-    features: ["Competition Setup", "Spectator Seating", "Professional Lighting"],
+    title: "Volleyball Courts",
+    description: "Dedicated volleyball practice and game courts with professional setup.",
+    image: "🏐",
+    features: ["Practice Courts", "Game Rentals", "Professional Setup"],
   },
   {
-    title: "Equipment Storage",
-    description: "Secure storage and maintenance area for all facility equipment and gear.",
-    image: "🔧",
-    features: ["Secure Storage", "Regular Maintenance", "Equipment Care"],
+    title: "Private Training Area",
+    description: "One-on-one training space with Coach Chris for personalized development.",
+    image: "👨‍🏫",
+    features: ["Personal Coaching", "Custom Training", "Skill Development"],
   },
 ];
 
@@ -103,28 +103,28 @@ export function FacilityGallery() {
             <div className="text-center">
               <div className="flex items-center justify-center mb-4">
                 <Camera className="h-8 w-8 text-primary mr-2" />
-                <h3 className="text-xl font-semibold text-gray-900">Facility Size</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Training Location</h3>
               </div>
-              <div className="text-3xl font-bold text-primary mb-2">15,000 sq ft</div>
-              <p className="text-gray-600">Total training space</p>
+              <div className="text-lg font-bold text-primary mb-2">10838 Bellcourt</div>
+              <p className="text-gray-600">Rancho Cucamonga, CA 91730</p>
             </div>
             
             <div className="text-center">
               <div className="flex items-center justify-center mb-4">
                 <MapPin className="h-8 w-8 text-primary mr-2" />
-                <h3 className="text-xl font-semibold text-gray-900">Location</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Services</h3>
               </div>
-              <div className="text-3xl font-bold text-primary mb-2">Downtown</div>
-              <p className="text-gray-600">Easy access & parking</p>
+              <div className="text-3xl font-bold text-primary mb-2">13</div>
+              <p className="text-gray-600">Available booking options</p>
             </div>
             
             <div className="text-center">
               <div className="flex items-center justify-center mb-4">
                 <Clock className="h-8 w-8 text-primary mr-2" />
-                <h3 className="text-xl font-semibold text-gray-900">Hours</h3>
+                <h3 className="text-xl font-semibold text-gray-900">Booking</h3>
               </div>
-              <div className="text-3xl font-bold text-primary mb-2">Extended</div>
-              <p className="text-gray-600">Flexible scheduling</p>
+              <div className="text-lg font-bold text-primary mb-2">By Appointment</div>
+              <p className="text-gray-600">Schedule online anytime</p>
             </div>
           </div>
         </motion.div>
@@ -138,19 +138,19 @@ export function FacilityGallery() {
         >
           <div className="bg-primary text-white rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4">
-              Want to See More?
+              Ready to Book?
             </h3>
             <p className="text-lg opacity-90 mb-6">
-              Schedule a facility tour and experience Locked N firsthand. 
-              Our team will show you around and answer any questions.
+              Choose from 13 available booking options including court rentals, 
+              Dr. Dish training, private coaching, and volleyball sessions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Schedule Tour
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors">
-                Virtual Tour
-              </button>
+              <a href="/booking" className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Book Now
+              </a>
+              <a href="/contact" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors">
+                Contact Us
+              </a>
             </div>
           </div>
         </motion.div>
@@ -158,6 +158,7 @@ export function FacilityGallery() {
     </section>
   );
 }
+
 
 
 

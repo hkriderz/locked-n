@@ -5,8 +5,8 @@ import { PricingFAQ } from "@/components/PricingFAQ";
 
 export const metadata: Metadata = {
   title: "Pricing - Locked N Sports Facility",
-  description: "Transparent pricing for gym rentals, training programs, youth academy, and tournaments. Flexible packages and group discounts available.",
-  keywords: "pricing, gym rental prices, training costs, youth academy fees, tournament entry fees",
+  description: "Transparent pricing for court rentals, Dr. Dish training, private coaching, and volleyball sessions. 13 booking options with clear pricing.",
+  keywords: "pricing, court rental prices, Dr. Dish training costs, private coaching fees, volleyball rental prices, sports facility pricing",
 };
 
 export default function Pricing() {
@@ -18,6 +18,7 @@ export default function Pricing() {
     </>
   );
 }
+
 
 
 

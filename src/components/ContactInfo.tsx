@@ -9,23 +9,23 @@ const contactMethods = [
   {
     icon: Phone,
     title: "Phone",
-    details: "(555) 123-4567",
+    details: "909-287-1268",
     description: "Call us for immediate assistance",
-    action: "tel:(555)123-4567",
+    action: "tel:909-287-1268",
     color: "blue"
   },
   {
     icon: Mail,
     title: "Email",
-    details: "info@lockedn.com",
+    details: "info@lockedninc.com",
     description: "Send us a message anytime",
-    action: "mailto:info@lockedn.com",
+    action: "mailto:info@lockedninc.com",
     color: "green"
   },
   {
     icon: MapPin,
-    title: "Address",
-    details: "123 Sports Ave, City, State 12345",
+    title: "Training Location",
+    details: "10838 Bellcourt\nRancho Cucamonga, CA 91730",
     description: "Visit our facility",
     action: "https://maps.google.com",
     color: "purple"
@@ -33,9 +33,9 @@ const contactMethods = [
   {
     icon: Clock,
     title: "Hours",
-    details: "Mon-Fri: 6AM-10PM\nSat-Sun: 8AM-8PM",
-    description: "We're here when you need us",
-    action: null,
+    details: "Appointment/Booking Only",
+    description: "Schedule your session online",
+    action: "/booking",
     color: "orange"
   }
 ];
@@ -172,9 +172,9 @@ export function ContactInfo() {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <span className="text-primary font-bold text-lg">📅</span>
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Book a Session</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">Book Court Rental</h4>
               <p className="text-gray-600 text-sm mb-4">
-                Schedule your training session or facility rental online.
+                Reserve full or half court rentals for basketball and volleyball.
               </p>
               <a
                 href="/booking"
@@ -188,26 +188,32 @@ export function ContactInfo() {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <span className="text-primary font-bold text-lg">🏢</span>
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Schedule Tour</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">Dr. Dish Training</h4>
               <p className="text-gray-600 text-sm mb-4">
-                Take a guided tour of our facility and see what we offer.
+                Book Dr. Dish CT+ shooting sessions for up to 4 shooters.
               </p>
-              <button className="text-primary font-semibold hover:underline">
-                Schedule Tour
-              </button>
+              <a
+                href="/booking"
+                className="text-primary font-semibold hover:underline"
+              >
+                Book Dr. Dish
+              </a>
             </div>
             
             <div className="bg-white rounded-lg p-6 text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <span className="text-primary font-bold text-lg">💬</span>
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Live Chat</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">Private Training</h4>
               <p className="text-gray-600 text-sm mb-4">
-                Chat with our team for instant answers to your questions.
+                Schedule one-on-one training sessions with Coach Chris.
               </p>
-              <button className="text-primary font-semibold hover:underline">
-                Start Chat
-              </button>
+              <a
+                href="/booking"
+                className="text-primary font-semibold hover:underline"
+              >
+                Book Training
+              </a>
             </div>
           </div>
         </motion.div>

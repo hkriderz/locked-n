@@ -6,11 +6,25 @@ import { Check, X, Star } from "lucide-react";
 
 const comparisonData = [
   {
-    feature: "Facility Access",
+    feature: "Court Access",
     basic: true,
     training: true,
     academy: true,
-    description: "Access to main training facility"
+    description: "Full and half court rentals"
+  },
+  {
+    feature: "Dr. Dish CT+ Technology",
+    basic: false,
+    training: true,
+    academy: false,
+    description: "State-of-the-art shooting machines"
+  },
+  {
+    feature: "Private Coaching",
+    basic: false,
+    training: false,
+    academy: true,
+    description: "One-on-one with Coach Chris"
   },
   {
     feature: "Equipment Included",
@@ -20,93 +34,79 @@ const comparisonData = [
     description: "All necessary equipment provided"
   },
   {
-    feature: "Personal Training",
+    feature: "Volleyball Courts",
+    basic: true,
+    training: true,
+    academy: true,
+    description: "Practice and game court access"
+  },
+  {
+    feature: "Flexible Scheduling",
+    basic: true,
+    training: true,
+    academy: true,
+    description: "Book online anytime"
+  },
+  {
+    feature: "Real-time Feedback",
     basic: false,
     training: true,
     academy: false,
-    description: "One-on-one coaching sessions"
+    description: "Dr. Dish CT+ analytics"
   },
   {
-    feature: "Group Training",
-    basic: false,
-    training: true,
-    academy: true,
-    description: "Group training sessions"
-  },
-  {
-    feature: "Progress Tracking",
-    basic: false,
-    training: true,
-    academy: true,
-    description: "Regular progress assessments"
-  },
-  {
-    feature: "Custom Training Plan",
-    basic: false,
-    training: true,
-    academy: true,
-    description: "Personalized training programs"
-  },
-  {
-    feature: "Nutrition Guidance",
+    feature: "Up to 4 Shooters",
     basic: false,
     training: true,
     academy: false,
-    description: "Diet and nutrition advice"
+    description: "Group Dr. Dish sessions"
   },
   {
-    feature: "Priority Booking",
-    basic: false,
+    feature: "Professional Flooring",
+    basic: true,
     training: true,
     academy: true,
-    description: "Priority access to time slots"
+    description: "High-quality court surfaces"
   },
   {
-    feature: "Parent Reports",
-    basic: false,
-    training: false,
-    academy: true,
-    description: "Regular progress reports for parents"
-  },
-  {
-    feature: "Character Development",
-    basic: false,
-    training: false,
-    academy: true,
-    description: "Focus on character and values"
-  },
-  {
-    feature: "Competition Prep",
-    basic: false,
+    feature: "Game Rentals",
+    basic: true,
     training: true,
     academy: true,
-    description: "Tournament and competition training"
+    description: "Extended 2.5-hour sessions"
   },
   {
-    feature: "Unlimited Access",
-    basic: false,
+    feature: "Appointment Only",
+    basic: true,
     training: true,
-    academy: false,
-    description: "Unlimited facility access"
+    academy: true,
+    description: "Scheduled sessions only"
+  },
+  {
+    feature: "Online Booking",
+    basic: true,
+    training: true,
+    academy: true,
+    description: "24/7 booking system"
   }
 ];
 
 const plans = [
   {
-    name: "Basic Rental",
-    price: "$25/hour",
+    name: "Court Rentals",
+    price: "$80+",
     color: "blue",
     popular: false
   },
   {
-    name: "Training Package",
-    price: "$200/month",
+    name: "Dr. Dish Training",
+    price: "$45+",
     color: "green",
     popular: true
   },
   {
-    name: "Youth Academy",
-    price: "$150/month",
+    name: "Private Training",
+    price: "$225/hr",
     color: "purple",
     popular: false
   }
@@ -149,10 +149,10 @@ export function PricingComparison() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Compare Plans
+            Compare Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See exactly what's included in each plan to make the best choice for your needs.
+            See exactly what's included in each service category to choose the best option for your training needs.
           </p>
         </motion.div>
 
@@ -226,50 +226,51 @@ export function PricingComparison() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
         >
-          <div className="bg-white rounded-xl p-6 shadow-lg">
-            <div className="text-center mb-4">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <span className="text-blue-600 font-bold">B</span>
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <div className="text-center mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <span className="text-blue-600 font-bold">C</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900">Court Rentals</h3>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900">Basic Rental</h3>
+              <p className="text-gray-600 text-sm text-center">
+                Perfect for practice sessions, team training, and casual games with flexible scheduling.
+              </p>
             </div>
-            <p className="text-gray-600 text-sm text-center">
-              Perfect for occasional users who want flexibility and don't need coaching.
-            </p>
-          </div>
 
-          <div className="bg-white rounded-xl p-6 shadow-lg ring-2 ring-primary">
-            <div className="text-center mb-4">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <span className="text-green-600 font-bold">T</span>
+            <div className="bg-white rounded-xl p-6 shadow-lg ring-2 ring-primary">
+              <div className="text-center mb-4">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <span className="text-green-600 font-bold">D</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900">Dr. Dish Training</h3>
+                <div className="inline-flex items-center px-2 py-1 bg-primary text-white text-xs rounded-full mt-2">
+                  <Star className="h-3 w-3 mr-1" />
+                  Most Popular
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900">Training Package</h3>
-              <div className="inline-flex items-center px-2 py-1 bg-primary text-white text-xs rounded-full mt-2">
-                <Star className="h-3 w-3 mr-1" />
-                Recommended
-              </div>
+              <p className="text-gray-600 text-sm text-center">
+                Best for serious athletes who want advanced shooting technology and real-time feedback.
+              </p>
             </div>
-            <p className="text-gray-600 text-sm text-center">
-              Best value for serious athletes who want comprehensive training and coaching.
-            </p>
-          </div>
 
-          <div className="bg-white rounded-xl p-6 shadow-lg">
-            <div className="text-center mb-4">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <span className="text-purple-600 font-bold">Y</span>
+            <div className="bg-white rounded-xl p-6 shadow-lg">
+              <div className="text-center mb-4">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <span className="text-purple-600 font-bold">P</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900">Private Training</h3>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900">Youth Academy</h3>
+              <p className="text-gray-600 text-sm text-center">
+                Ideal for athletes who need personalized coaching and skill development with Coach Chris.
+              </p>
             </div>
-            <p className="text-gray-600 text-sm text-center">
-              Ideal for young athletes who need structured development and character building.
-            </p>
-          </div>
         </motion.div>
       </div>
     </section>
   );
 }
+
 
 
 

@@ -25,8 +25,9 @@ export function CTASection() {
             Ready to Experience Excellence?
           </h2>
           <p className="text-xl lg:text-2xl opacity-90 max-w-3xl mx-auto">
-            Join hundreds of satisfied clients who have elevated their game at Locked N. 
-            Book your session today and discover what makes us different.
+            Choose from 13 available booking options including court rentals, 
+            Dr. Dish training, private coaching, and volleyball sessions. 
+            Book your appointment today and experience excellence.
           </p>
         </motion.div>
 
@@ -43,8 +44,8 @@ export function CTASection() {
                 Book Your Session Today
               </h3>
               <p className="text-lg opacity-90 leading-relaxed">
-                Whether you're looking for gym rentals, training programs, or tournament participation, 
-                we have the perfect solution for your needs. Our flexible scheduling and professional 
+                Whether you're looking for court rentals, Dr. Dish training, private coaching, or volleyball sessions, 
+                we have the perfect solution for your needs. Our appointment-only booking system and professional 
                 staff make it easy to get started.
               </p>
             </div>
@@ -60,7 +61,7 @@ export function CTASection() {
                 <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
                   <Phone className="h-4 w-4" />
                 </div>
-                <span className="text-lg">24/7 Support Available</span>
+                <span className="text-lg">Professional Support</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
@@ -99,7 +100,7 @@ export function CTASection() {
                 <Phone className="h-6 w-6 mt-1" />
                 <div>
                   <div className="font-semibold">Phone</div>
-                  <div className="opacity-90">(555) 123-4567</div>
+                  <div className="opacity-90">909-287-1268</div>
                 </div>
               </div>
               
@@ -107,26 +108,23 @@ export function CTASection() {
                 <Mail className="h-6 w-6 mt-1" />
                 <div>
                   <div className="font-semibold">Email</div>
-                  <div className="opacity-90">info@lockedn.com</div>
+                  <div className="opacity-90">info@lockedninc.com</div>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4">
                 <Calendar className="h-6 w-6 mt-1" />
                 <div>
-                  <div className="font-semibold">Hours</div>
-                  <div className="opacity-90">
-                    <div>Mon-Fri: 6AM-10PM</div>
-                    <div>Sat-Sun: 8AM-8PM</div>
-                  </div>
+                  <div className="font-semibold">Booking</div>
+                  <div className="opacity-90">Appointment Only</div>
                 </div>
               </div>
             </div>
 
             <div className="mt-8 pt-6 border-t border-white/20">
               <p className="text-sm opacity-80">
-                New to Locked N? We offer special introductory rates for first-time visitors. 
-                Contact us to learn more about our welcome packages.
+                New to Locked N? Choose from our 13 available booking options including court rentals, 
+                Dr. Dish training, private coaching, and volleyball sessions.
               </p>
             </div>
           </motion.div>
@@ -141,14 +139,14 @@ export function CTASection() {
         >
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
             <h4 className="text-xl font-bold mb-2">
-              Limited Time Offer
+              Book Your Session
             </h4>
             <p className="opacity-90 mb-4">
-              Get 20% off your first booking when you sign up for our newsletter
+              Choose from 13 available options and book your appointment online
             </p>
             <Button variant="secondary" size="lg" asChild>
-              <Link href="/booking?promo=welcome20">
-                Claim Your Discount
+              <Link href="/booking">
+                Book Now
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -158,6 +156,7 @@ export function CTASection() {
     </section>
   );
 }
+
 
 
 

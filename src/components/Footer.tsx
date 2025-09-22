@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Instagram, MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
@@ -11,10 +12,11 @@ const navigation = {
     { name: "Contact", href: "/contact" },
   ],
   services: [
-    { name: "Gym Rentals", href: "/services#gym-rentals" },
-    { name: "Training Programs", href: "/services#training" },
-    { name: "Youth Academy", href: "/services#academy" },
-    { name: "Tournaments", href: "/services#tournaments" },
+    { name: "Court Rentals", href: "/services#court-rentals" },
+    { name: "Dr. Dish Training", href: "/services#dish-training" },
+    { name: "Private Training", href: "/services#private-training" },
+    { name: "Volleyball Rentals", href: "/services#volleyball" },
+    { name: "Game Rentals", href: "/services#game-rentals" },
   ],
   support: [
     { name: "Client Portal", href: "/portal" },
@@ -42,38 +44,59 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center mb-4">
-              <div className="h-10 w-10 bg-[#F37C07] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">L'N</span>
+            <div className="mb-6">
+              <div className="h-20 w-auto relative">
+                <Image
+                  src="/images/locked-n-logo.png"
+                  alt="Locked 'N Logo"
+                  width={240}
+                  height={80}
+                  className="object-contain"
+                />
               </div>
-              <span className="ml-3 text-2xl font-bold">Locked 'N</span>
             </div>
-            <p className="text-gray-300 mb-4">
-              Premier Basketball Training and Shooting Lab equipped with state-of-the-art Dr. Dish C+ shooting machines. 
-              Basketball and Volleyball gym rentals, plus private training sessions. Locked N Powered by Gyfted.
-            </p>
-            <div className="space-y-2">
-              <div className="flex items-center text-gray-300">
-                <MapPin className="h-4 w-4 mr-2" />
-                <span>123 Sports Ave, City, State 12345</span>
+            <div className="space-y-3">
+              <div>
+                <h4 className="text-sm font-semibold text-white mb-2">Training Location</h4>
+                <div className="space-y-1">
+                  <div className="flex items-center text-gray-300">
+                    <MapPin className="h-4 w-4 mr-2" />
+                    <span>10838 Bellcourt</span>
+                  </div>
+                  <div className="flex items-center text-gray-300 ml-6">
+                    <span>Rancho Cucamonga, CA 91730</span>
+                  </div>
+                  <div className="flex items-center text-gray-300">
+                    <Phone className="h-4 w-4 mr-2" />
+                    <a href="tel:909-287-1268" className="hover:text-white transition-colors">909-287-1268</a>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center text-gray-300">
-                <Phone className="h-4 w-4 mr-2" />
-                <span>(555) 123-4567</span>
+              
+              <div>
+                <h4 className="text-sm font-semibold text-white mb-2">Corporate Headquarters</h4>
+                <div className="space-y-1">
+                  <div className="flex items-center text-gray-300">
+                    <MapPin className="h-4 w-4 mr-2" />
+                    <span>555 Anton Blvd, Suite #200</span>
+                  </div>
+                  <div className="flex items-center text-gray-300 ml-6">
+                    <span>Costa Mesa, CA 92626</span>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center text-gray-300">
-                <Mail className="h-4 w-4 mr-2" />
-                <span>info@lockedn.com</span>
-              </div>
+              
               <div className="flex items-center text-gray-300">
                 <Clock className="h-4 w-4 mr-2" />
-                <span>Mon-Fri: 6AM-10PM, Sat-Sun: 8AM-8PM</span>
+                <Link href="/booking" className="hover:text-white transition-colors">
+                  Appointment/Booking Only
+                </Link>
               </div>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="pt-6">
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {navigation.main.map((item) => (
@@ -90,7 +113,7 @@ export function Footer() {
           </div>
 
           {/* Services */}
-          <div>
+          <div className="pt-6">
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {navigation.services.map((item) => (
@@ -107,7 +130,7 @@ export function Footer() {
           </div>
 
           {/* Support & Social */}
-          <div>
+          <div className="pt-6">
             <h3 className="text-lg font-semibold mb-4">Support</h3>
             <ul className="space-y-2 mb-6">
               {navigation.support.map((item) => (
@@ -123,7 +146,7 @@ export function Footer() {
             </ul>
             
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mb-4">
               {navigation.social.map((item) => {
                 const Icon = item.icon;
                 return (
@@ -145,6 +168,12 @@ export function Footer() {
                   </Button>
                 );
               })}
+            </div>
+            
+            <h3 className="text-lg font-semibold mb-3">Mail</h3>
+            <div className="flex items-center text-gray-300">
+              <Mail className="h-4 w-4 mr-2" />
+              <a href="mailto:info@lockedninc.com" className="hover:text-white transition-colors">info@lockedninc.com</a>
             </div>
           </div>
         </div>

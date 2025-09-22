@@ -7,43 +7,43 @@ import { Target, Trophy, Users, Zap, Shield, Clock } from "lucide-react";
 const highlights = [
   {
     icon: Target,
-    title: "State-of-the-Art Shooting Machines",
-    description: "Cutting-edge technology with precision targeting systems and real-time feedback.",
+    title: "Dr. Dish CT+ Technology",
+    description: "State-of-the-art Dr. Dish CT+ shooting machines with precision targeting and real-time feedback for up to 4 shooters.",
     color: "text-blue-600",
     bgColor: "bg-blue-100",
   },
   {
     icon: Trophy,
-    title: "Competitive Tournaments",
-    description: "Regular tournaments and leagues for all skill levels with professional prizes.",
+    title: "Court Rentals",
+    description: "Full and half court basketball rentals with professional-grade equipment and flexible scheduling.",
     color: "text-yellow-600",
     bgColor: "bg-yellow-100",
   },
   {
     icon: Users,
-    title: "Youth Academy Programs",
-    description: "Comprehensive training programs designed specifically for young athletes.",
+    title: "Private Training",
+    description: "One-on-one coaching sessions with Coach Chris for personalized skill development and training.",
     color: "text-green-600",
     bgColor: "bg-green-100",
   },
   {
     icon: Zap,
-    title: "High-End Training",
-    description: "Professional coaching with personalized training plans and advanced techniques.",
+    title: "Volleyball Facilities",
+    description: "Dedicated volleyball practice and game courts with professional setup and equipment.",
     color: "text-purple-600",
     bgColor: "bg-purple-100",
   },
   {
     icon: Shield,
     title: "Safety First",
-    description: "Top-tier safety protocols and equipment maintenance for peace of mind.",
+    description: "Top-tier safety protocols and equipment maintenance for peace of mind during all sessions.",
     color: "text-red-600",
     bgColor: "bg-red-100",
   },
   {
     icon: Clock,
-    title: "Flexible Scheduling",
-    description: "Extended hours and flexible booking options to fit your schedule.",
+    title: "Appointment Booking",
+    description: "Easy online booking system with 13 available options and appointment-only scheduling.",
     color: "text-indigo-600",
     bgColor: "bg-indigo-100",
   },
@@ -110,29 +110,29 @@ export function FacilityHighlights() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Premium Experience Guaranteed
+                Premium Sports Experience
               </h3>
               <p className="text-gray-600 mb-6">
-                Our facility combines cutting-edge technology with professional expertise 
-                to deliver an unmatched sports experience. From beginners to professionals, 
-                we provide the tools and training you need to excel.
+                Our facility combines cutting-edge Dr. Dish CT+ technology with professional expertise 
+                to deliver an unmatched sports experience. From court rentals to private training, 
+                we provide the tools and coaching you need to excel.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center text-gray-700">
                   <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                  Professional-grade equipment maintenance
+                  Dr. Dish CT+ shooting machines with advanced technology
                 </li>
                 <li className="flex items-center text-gray-700">
                   <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                  Certified instructors and coaches
+                  Private coaching sessions with Coach Chris
                 </li>
                 <li className="flex items-center text-gray-700">
                   <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                  Flexible membership and rental options
+                  Flexible court rentals for basketball and volleyball
                 </li>
                 <li className="flex items-center text-gray-700">
                   <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                  Community events and tournaments
+                  13 booking options with easy online scheduling
                 </li>
               </ul>
             </div>
@@ -151,6 +151,7 @@ export function FacilityHighlights() {
     </section>
   );
 }
+
 
 
 

@@ -8,93 +8,89 @@ import { Check, Star, ArrowRight, Clock, Users, Trophy } from "lucide-react";
 
 const pricingPlans = [
   {
-    name: "Basic Rental",
-    price: "$25",
-    period: "per hour",
-    description: "Perfect for individual training sessions and practice.",
+    name: "Court Rentals",
+    price: "$80",
+    period: "starting at",
+    description: "Full and half court rentals for basketball and volleyball practice.",
     icon: Clock,
     features: [
-      "Access to main facility",
-      "Basic equipment included",
+      "1 Hour Full Court - $105",
+      "1 Hour Half Court - $80", 
+      "2 Hour Full Court - $170",
+      "All court equipment included",
       "Flexible scheduling",
-      "Safety briefing",
-      "Equipment orientation",
-      "Locker room access"
+      "Professional-grade flooring"
     ],
     popular: false,
     color: "blue",
-    cta: "Book Now"
+    cta: "Book Court"
   },
   {
-    name: "Training Package",
-    price: "$200",
-    period: "per month",
-    description: "Comprehensive training program with professional coaching.",
+    name: "Dr. Dish Training",
+    price: "$45",
+    period: "starting at",
+    description: "State-of-the-art Dr. Dish CT+ shooting machines with precision training.",
     icon: Users,
     features: [
-      "8 personal training sessions",
-      "Unlimited facility access",
-      "Progress tracking",
-      "Custom training plan",
-      "Nutrition guidance",
-      "Performance analysis",
-      "Priority booking",
-      "Equipment rental included"
+      "1 Hour Shooting - $45 (up to 4 people)",
+      "1 Hour Full Court w/ Dr. Dish - $160",
+      "Private Half Court w/ Dr. Dish - $55",
+      "2 Hour Full Court w/ Dr. Dish - $215",
+      "Private 2Hr Half Court w/ Dr. Dish - $90",
+      "Real-time feedback technology"
     ],
     popular: true,
     color: "green",
-    cta: "Get Started"
+    cta: "Book Dr. Dish"
   },
   {
-    name: "Youth Academy",
-    price: "$150",
-    period: "per month",
-    description: "Complete youth development program with character building.",
+    name: "Private Training",
+    price: "$225",
+    period: "per hour",
+    description: "One-on-one coaching sessions with Coach Chris for personalized development.",
     icon: Trophy,
     features: [
-      "Age-appropriate training",
-      "Character development",
-      "Parent progress reports",
-      "Safety-first approach",
-      "Competition preparation",
-      "Team building activities",
-      "Equipment included",
-      "Certified instructors"
+      "Personalized training plans",
+      "Skill-specific coaching",
+      "Performance analysis",
+      "Progress tracking",
+      "Flexible scheduling",
+      "Professional expertise"
     ],
     popular: false,
     color: "purple",
-    cta: "Enroll Now"
+    cta: "Book Training"
   }
 ];
 
 const additionalServices = [
   {
-    name: "Tournament Entry",
-    price: "$25-50",
-    period: "per event",
-    description: "Competitive tournaments with prizes and recognition.",
-    features: ["Professional refereeing", "Live scoring", "Prize pools", "Certificates"]
+    name: "Volleyball Rentals",
+    price: "$110",
+    period: "starting at",
+    description: "Practice and game court rentals for volleyball sessions.",
+    features: ["1 Hour Practice - $110", "2 Hour Practice - $170", "2.5 Hour Game - $250", "All volleyball equipment included"]
   },
   {
-    name: "Group Training",
-    price: "$30",
+    name: "Game Rentals",
+    price: "$250",
     period: "per session",
-    description: "Group training sessions for teams and organizations.",
-    features: ["Team discounts", "Custom programs", "Equipment included", "Progress tracking"]
+    description: "Extended game sessions for basketball and volleyball.",
+    features: ["2.5 Hour Basketball Game - $250", "2.5 Hour Volleyball Game - $250", "Full court access", "All equipment included"]
   },
   {
-    name: "Equipment Rental",
-    price: "$10-25",
-    period: "per item",
-    description: "Rent specialized equipment for your training needs.",
-    features: ["Professional gear", "Maintenance included", "Flexible terms", "Delivery available"]
+    name: "Dr. Dish Equipment",
+    price: "Included",
+    period: "with training",
+    description: "State-of-the-art Dr. Dish CT+ shooting machines and training equipment.",
+    features: ["CT+ Technology", "Real-time feedback", "Up to 4 shooters", "Professional maintenance"]
   },
   {
-    name: "Event Hosting",
-    price: "$500",
-    period: "per day",
-    description: "Host your own tournaments and events at our facility.",
-    features: ["Full facility access", "Setup assistance", "Staff support", "Equipment included"]
+    name: "Private Sessions",
+    price: "$225",
+    period: "per hour",
+    description: "One-on-one training with Coach Chris for personalized development.",
+    features: ["Personalized coaching", "Skill development", "Progress tracking", "Flexible scheduling"]
   }
 ];
 
@@ -142,9 +138,9 @@ export function PricingTables() {
             Transparent Pricing
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Choose the plan that best fits your needs. All our pricing is transparent 
-            with no hidden fees or surprise charges. We offer flexible options for 
-            individuals, groups, and organizations.
+            Choose from 13 available booking options with clear, transparent pricing. 
+            From court rentals to Dr. Dish training and private coaching, we offer 
+            flexible options for every athlete and team.
           </p>
         </motion.div>
 
@@ -221,7 +217,7 @@ export function PricingTables() {
               Additional Services
             </h2>
             <p className="text-xl text-gray-600">
-              Enhance your experience with these specialized services and add-ons.
+              Complete your training experience with these specialized services and equipment.
             </p>
           </div>
 
@@ -268,33 +264,33 @@ export function PricingTables() {
         >
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold mb-4">
-              Special Offers & Discounts
+              Booking Information
             </h3>
             <p className="text-lg opacity-90">
-              Take advantage of these special offers and save on your training.
+              All services are available by appointment only. Book online anytime for your convenience.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-3xl font-bold mb-2">20%</div>
-              <div className="text-sm opacity-90">Group Discount</div>
-              <div className="text-xs opacity-80">10+ people</div>
+              <div className="text-3xl font-bold mb-2">13</div>
+              <div className="text-sm opacity-90">Booking Options</div>
+              <div className="text-xs opacity-80">Available online</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold mb-2">15%</div>
-              <div className="text-sm opacity-90">Student Discount</div>
-              <div className="text-xs opacity-80">Valid ID required</div>
+              <div className="text-3xl font-bold mb-2">24/7</div>
+              <div className="text-sm opacity-90">Online Booking</div>
+              <div className="text-xs opacity-80">Schedule anytime</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold mb-2">20%</div>
-              <div className="text-sm opacity-90">Military Discount</div>
-              <div className="text-xs opacity-80">Active & veteran</div>
+              <div className="text-3xl font-bold mb-2">Dr. Dish</div>
+              <div className="text-sm opacity-90">CT+ Technology</div>
+              <div className="text-xs opacity-80">State-of-the-art</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold mb-2">2 Free</div>
-              <div className="text-sm opacity-90">Annual Membership</div>
-              <div className="text-xs opacity-80">Months included</div>
+              <div className="text-3xl font-bold mb-2">Coach</div>
+              <div className="text-sm opacity-90">Chris Available</div>
+              <div className="text-xs opacity-80">Private training</div>
             </div>
           </div>
         </motion.div>
@@ -302,6 +298,7 @@ export function PricingTables() {
     </section>
   );
 }
+
 
 
 

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -28,11 +29,11 @@ export function Header() {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>(555) 123-4567</span>
+                <a href="tel:909-287-1268" className="hover:text-accent transition-colors">909-287-1268</a>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>info@lockedn.com</span>
+                <a href="mailto:info@lockedninc.com" className="hover:text-accent transition-colors">info@lockedninc.com</a>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -45,16 +46,22 @@ export function Header() {
       </div>
 
       {/* Main Navigation */}
-      <nav className="bg-white">
+      <nav className="bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center">
-                <div className="h-10 w-10 bg-[#F37C07] rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">L'N</span>
+              <Link href="/" className="flex items-center h-full">
+                <div className="h-10 w-auto relative flex items-center justify-center">
+                  <Image
+                    src="/images/locked-n-logo.png"
+                    alt="Locked 'N Logo"
+                    width={200}
+                    height={40}
+                    className="object-contain mx-auto mt-0"
+                    priority
+                  />
                 </div>
-                <span className="ml-3 text-2xl font-bold text-gray-900">Locked 'N</span>
               </Link>
             </div>
 
@@ -67,8 +74,8 @@ export function Header() {
                     href={item.href}
                     className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       pathname === item.href
-                        ? "text-primary bg-primary/10"
-                        : "text-gray-700 hover:text-primary hover:bg-gray-50"
+                        ? "text-[#F37C07] bg-[#F37C07]/20"
+                        : "text-gray-300 hover:text-[#F37C07] hover:bg-gray-700"
                     }`}
                   >
                     {item.name}

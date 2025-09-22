@@ -24,13 +24,70 @@ const bookingSchema = z.object({
 
 type BookingFormData = z.infer<typeof bookingSchema>;
 
-const services = [
-  { id: "gym-rental", name: "Gym Rental", price: "$25/hour", price_per_hour: 25 },
-  { id: "personal-training", name: "Personal Training", price: "$50/session", price_per_session: 50 },
-  { id: "group-training", name: "Group Training", price: "$30/session", price_per_session: 30 },
-  { id: "youth-academy", name: "Youth Academy", price: "$150/month", price_per_month: 150 },
-  { id: "tournament", name: "Tournament Entry", price: "$25-50/event", price_per_session: 25 },
+const serviceCategories = [
+  {
+    id: "court-rentals",
+    name: "Court Rentals",
+    description: "Rent our basketball and volleyball courts",
+    icon: "🏟️",
+    services: [
+      { id: "1h-full-court", name: "1 Hour Full Court Rental", duration: "1h", price: "$105" },
+      { id: "1h-half-court", name: "1 Hour Half Court Rental", duration: "1h", price: "$80" },
+      { id: "2h-full-court", name: "2 Hour Full Court Rental - Basketball", duration: "2h", price: "$170" },
+    ]
+  },
+  {
+    id: "dr-dish-training",
+    name: "Dr. Dish Training",
+    description: "State-of-the-art shooting machines",
+    icon: "🎯",
+    services: [
+      { id: "1h-full-dish", name: "1 Hour Full Court w/ Dr. Dish CT+", duration: "1h", price: "$160" },
+      { id: "1h-shooting", name: "1 Hour Shooting Dr. Dish CT+", duration: "1h", maxParticipants: 4, price: "$45" },
+      { id: "1h-half-dish", name: "Private 1 Hour Half Court w/ Dr. Dish CT+", duration: "1h", price: "$55" },
+      { id: "2h-full-dish", name: "2 Hour Full Court w/ Dr. Dish CT+", duration: "2h", price: "$215" },
+      { id: "2h-half-dish", name: "Private 2Hr Half Court w/ Dr. Dish CT+", duration: "2h", price: "$90" },
+    ]
+  },
+  {
+    id: "volleyball",
+    name: "Volleyball Rentals",
+    description: "Practice and game court rentals",
+    icon: "🏐",
+    services: [
+      { id: "1h-volleyball", name: "1 Hour Volleyball Practice Court", duration: "1h", price: "$110" },
+      { id: "2h-volleyball", name: "2 Hour Volleyball Practice Court", duration: "2h", price: "$170" },
+      { id: "2.5h-volleyball", name: "2.5 Hour Full Court Game Rental - Volleyball", duration: "2.5h", price: "$250" },
+    ]
+  },
+  {
+    id: "private-training",
+    name: "Private Training",
+    description: "One-on-one coaching sessions",
+    icon: "👨‍🏫",
+    services: [
+      { id: "private-training", name: "1hr. Private Training w/ Coach Chris", duration: "1h", price: "$225" },
+    ]
+  },
+  {
+    id: "game-rentals",
+    name: "Game Rentals",
+    description: "Extended game sessions",
+    icon: "🏆",
+    services: [
+      { id: "2.5h-basketball", name: "2.5 Hr. Basketball Game Rental", duration: "2.5h", price: "$250" },
+    ]
+  }
 ];
+
+// Flatten services for form processing
+const services = serviceCategories.flatMap(category => 
+  category.services.map(service => ({
+    ...service,
+    category: category.name,
+    categoryId: category.id
+  }))
+);
 
 const timeSlots = [
   "6:00 AM", "7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM",
@@ -39,11 +96,9 @@ const timeSlots = [
 ];
 
 const durations = [
-  { value: "1", label: "1 Hour" },
-  { value: "2", label: "2 Hours" },
-  { value: "3", label: "3 Hours" },
-  { value: "4", label: "4 Hours" },
-  { value: "full-day", label: "Full Day" },
+  { value: "1h", label: "1 Hour" },
+  { value: "2h", label: "2 Hours" },
+  { value: "2.5h", label: "2.5 Hours" },
 ];
 
 export function BookingForm() {
@@ -102,18 +157,11 @@ export function BookingForm() {
     const service = services.find(s => s.id === serviceId);
     if (!service) return 0;
 
-    const durationHours = duration === 'full-day' ? 8 : parseInt(duration);
+    // Extract price from service.price string (e.g., "$105" -> 105)
+    const priceString = service.price || "$0";
+    const price = parseInt(priceString.replace("$", ""));
     
-    // Calculate based on service pricing
-    if (service.price_per_hour) {
-      return service.price_per_hour * durationHours;
-    } else if (service.price_per_session) {
-      return service.price_per_session;
-    } else if (service.price_per_month) {
-      return service.price_per_month;
-    }
-    
-    return 0;
+    return price;
   };
 
   const nextStep = () => setCurrentStep(prev => Math.min(prev + 1, 4));
@@ -195,25 +243,43 @@ export function BookingForm() {
                   <p className="text-gray-600">Choose the service you'd like to book</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {services.map((service) => (
-                    <label
-                      key={service.id}
-                      className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
-                        selectedService === service.id
-                          ? "border-primary bg-primary/5"
-                          : "border-gray-200 hover:border-gray-300"
-                      }`}
-                    >
-                      <input
-                        type="radio"
-                        value={service.id}
-                        {...register("service")}
-                        className="sr-only"
-                      />
-                      <div className="font-semibold text-gray-900">{service.name}</div>
-                      <div className="text-primary font-medium">{service.price}</div>
-                    </label>
+                <div className="space-y-6">
+                  {serviceCategories.map((category) => (
+                    <div key={category.id} className="bg-white rounded-lg border border-gray-200 p-6">
+                      <div className="flex items-center mb-4">
+                        <span className="text-2xl mr-3">{category.icon}</span>
+                        <div>
+                          <h3 className="text-lg font-semibold text-gray-900">{category.name}</h3>
+                          <p className="text-sm text-gray-600">{category.description}</p>
+                        </div>
+                      </div>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                        {category.services.map((service) => (
+                          <label
+                            key={service.id}
+                            className={`p-3 rounded-lg border-2 cursor-pointer transition-colors ${
+                              selectedService === service.id
+                                ? "border-primary bg-primary/5"
+                                : "border-gray-200 hover:border-gray-300"
+                            }`}
+                          >
+                            <input
+                              type="radio"
+                              value={service.id}
+                              {...register("service")}
+                              className="sr-only"
+                            />
+                            <div className="font-medium text-gray-900 text-sm">{service.name}</div>
+                            <div className="text-xs text-gray-600 mt-1">{service.duration}</div>
+                            <div className="text-xs text-primary font-semibold mt-1">{service.price}</div>
+                            {service.maxParticipants && (
+                              <div className="text-xs text-gray-500 mt-1">Max {service.maxParticipants} people</div>
+                            )}
+                          </label>
+                        ))}
+                      </div>
+                    </div>
                   ))}
                 </div>
 
@@ -302,10 +368,15 @@ export function BookingForm() {
                     <input
                       type="number"
                       min="1"
-                      max="20"
+                      max={services.find(s => s.id === selectedService)?.maxParticipants || 20}
                       {...register("participants", { valueAsNumber: true })}
                       className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                     />
+                    {services.find(s => s.id === selectedService)?.maxParticipants && (
+                      <p className="text-sm text-gray-600 mt-1">
+                        Maximum {services.find(s => s.id === selectedService)?.maxParticipants} participants for this service
+                      </p>
+                    )}
                     {errors.participants && (
                       <p className="text-red-600 text-sm mt-1">{errors.participants.message}</p>
                     )}

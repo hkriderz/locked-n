@@ -8,92 +8,92 @@ import { Calendar, Users, Trophy, Clock, Shield, Star, ArrowRight } from "lucide
 
 const services = [
   {
-    id: "gym-rentals",
+    id: "court-rentals",
     icon: Calendar,
-    title: "Gym Rentals",
-    subtitle: "Flexible Facility Access",
-    description: "Rent our state-of-the-art facility for individual training, group sessions, or special events. Perfect for athletes, teams, and organizations.",
+    title: "Court Rentals",
+    subtitle: "Full & Half Court Access",
+    description: "Rent our premium basketball and volleyball courts for practice sessions, training, or games. Available in 1-hour and 2-hour sessions.",
     features: [
-      "Hourly and daily rental options",
-      "All equipment included",
-      "Flexible scheduling",
-      "Group discounts available",
-      "Event hosting capabilities",
-      "Professional setup assistance"
+      "Full court basketball rentals",
+      "Half court basketball rentals",
+      "Volleyball practice courts",
+      "1-hour and 2-hour sessions",
+      "All court equipment included",
+      "Flexible scheduling available"
     ],
     pricing: {
-      hourly: "$25/hour",
-      daily: "$200/day",
-      group: "20% off groups 10+"
+      "1h Full Court": "$105",
+      "2h Full Court": "$170",
+      "1h Half Court": "$80"
     },
     color: "blue",
     image: "🏟️"
   },
   {
-    id: "training",
+    id: "dish-training",
     icon: Users,
-    title: "Training Programs",
-    subtitle: "Professional Coaching",
-    description: "Comprehensive training programs designed for all skill levels, from beginners to competitive athletes. Personalized coaching and skill development.",
+    title: "Dr. Dish Training",
+    subtitle: "State-of-the-Art Shooting",
+    description: "Experience our Dr. Dish CT+ shooting machines - the most advanced basketball training technology. Perfect for individual or group training sessions.",
     features: [
-      "Personal training sessions",
-      "Group training classes",
-      "Skill-specific workshops",
+      "Dr. Dish CT+ shooting machines",
+      "Up to 4 shooters per session",
+      "1-hour and 2-hour sessions",
+      "Full court with equipment",
+      "Half court with equipment",
+      "Professional training environment"
+    ],
+    pricing: {
+      "1h Shooting": "$45",
+      "2h Full Court": "$215",
+      "2h Half Court": "$90"
+    },
+    color: "green",
+    image: "🎯"
+  },
+  {
+    id: "private-training",
+    icon: Shield,
+    title: "Private Training",
+    subtitle: "One-on-One Coaching",
+    description: "Personalized training sessions with Coach Chris. Get individual attention and customized training programs designed for your specific needs.",
+    features: [
+      "1-hour private sessions",
+      "Personalized coaching",
+      "Skill-specific training",
       "Performance analysis",
       "Custom training plans",
       "Progress tracking"
     ],
     pricing: {
-      personal: "$50/session",
-      group: "$30/session",
-      package: "10% off packages"
+      "1hr Private": "$225",
+      "Personalized": "Training Plans",
+      "Progress": "Tracking Included"
     },
-    color: "green",
+    color: "purple",
     image: "👨‍🏫"
   },
   {
-    id: "academy",
+    id: "volleyball-rentals",
     icon: Trophy,
-    title: "Youth Academy",
-    subtitle: "Young Athletes Development",
-    description: "Specialized programs for young athletes focusing on skill development, sportsmanship, and character building in a safe environment.",
+    title: "Volleyball Rentals",
+    subtitle: "Practice & Game Courts",
+    description: "Dedicated volleyball court rentals for practice sessions and games. Available in 1-hour practice sessions and 2.5-hour game rentals.",
     features: [
-      "Age-appropriate training",
-      "Character development",
-      "Safety-first approach",
-      "Parent involvement programs",
-      "Progress reports",
-      "Competition preparation"
+      "Volleyball practice courts",
+      "1-hour practice sessions",
+      "2.5-hour game rentals",
+      "Professional volleyball setup",
+      "All volleyball equipment included",
+      "Flexible scheduling"
     ],
     pricing: {
-      monthly: "$150/month",
-      semester: "$400/semester",
-      summer: "$300/camp"
-    },
-    color: "purple",
-    image: "👨‍👩‍👧‍👦"
-  },
-  {
-    id: "tournaments",
-    icon: Clock,
-    title: "Tournaments & Events",
-    subtitle: "Competitive Opportunities",
-    description: "Regular tournaments, leagues, and special events throughout the year. Professional organization with prizes and recognition.",
-    features: [
-      "Monthly tournaments",
-      "Seasonal leagues",
-      "Championship events",
-      "Prize pools and awards",
-      "Professional refereeing",
-      "Live scoring systems"
-    ],
-    pricing: {
-      entry: "$25-50/event",
-      league: "$100/season",
-      championship: "$75/championship"
+      "1h Practice": "$110",
+      "2h Practice": "$170",
+      "2.5h Game": "$250"
     },
     color: "orange",
-    image: "🏆"
+    image: "🏐"
   }
 ];
 
@@ -254,18 +254,18 @@ export function DetailedServices() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg p-6 text-center">
               <Star className="h-8 w-8 text-yellow-600 mx-auto mb-4" />
-              <h4 className="font-semibold text-gray-900 mb-2">Equipment Rental</h4>
-              <p className="text-sm text-gray-600">Rent specialized equipment for your training needs.</p>
+              <h4 className="font-semibold text-gray-900 mb-2">Game Rentals</h4>
+              <p className="text-sm text-gray-600">Extended 2.5-hour game rentals for basketball and volleyball.</p>
             </div>
             <div className="bg-white rounded-lg p-6 text-center">
               <Users className="h-8 w-8 text-blue-600 mx-auto mb-4" />
-              <h4 className="font-semibold text-gray-900 mb-2">Team Training</h4>
-              <p className="text-sm text-gray-600">Customized training programs for sports teams.</p>
+              <h4 className="font-semibold text-gray-900 mb-2">Dr. Dish Equipment</h4>
+              <p className="text-sm text-gray-600">State-of-the-art Dr. Dish CT+ shooting machines with training equipment.</p>
             </div>
             <div className="bg-white rounded-lg p-6 text-center">
               <Trophy className="h-8 w-8 text-purple-600 mx-auto mb-4" />
-              <h4 className="font-semibold text-gray-900 mb-2">Event Hosting</h4>
-              <p className="text-sm text-gray-600">Host your own tournaments and events at our facility.</p>
+              <h4 className="font-semibold text-gray-900 mb-2">Private Sessions</h4>
+              <p className="text-sm text-gray-600">One-on-one training with Coach Chris for personalized development.</p>
             </div>
           </div>
         </motion.div>
@@ -273,6 +273,7 @@ export function DetailedServices() {
     </section>
   );
 }
+
 
 
 
