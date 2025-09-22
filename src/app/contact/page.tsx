@@ -5,8 +5,8 @@ import { MapSection } from "@/components/MapSection";
 
 export const metadata: Metadata = {
   title: "Contact Us - Locked N Sports Facility",
-  description: "Get in touch with Locked N for bookings, questions, or facility tours. Call (555) 123-4567 or visit us at 123 Sports Ave.",
-  keywords: "contact locked n, sports facility contact, booking information, facility location",
+  description: "Get in touch with Locked N for bookings, questions, or facility tours. Call 909-287-1268 or visit us at 10838 Bellcourt, Rancho Cucamonga, CA 91730.",
+  keywords: "contact locked n, sports facility contact, booking information, facility location, rancho cucamonga",
 };
 
 export default function Contact() {

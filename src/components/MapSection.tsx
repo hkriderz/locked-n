@@ -23,8 +23,8 @@ export function MapSection() {
             Find Us
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Visit our state-of-the-art facility located in the heart of the city. 
-            Easy access with plenty of parking available.
+            Visit our training facility located in Rancho Cucamonga, CA. 
+            All sessions are by appointment only - book online anytime.
           </p>
         </motion.div>
 
@@ -52,8 +52,8 @@ export function MapSection() {
                 <div className="w-3 h-3 bg-primary rounded-full mr-2"></div>
                 <span className="font-semibold text-gray-900">Locked N</span>
               </div>
-              <p className="text-sm text-gray-600">123 Sports Ave</p>
-              <p className="text-sm text-gray-600">City, State 12345</p>
+              <p className="text-sm text-gray-600">10838 Bellcourt</p>
+              <p className="text-sm text-gray-600">Rancho Cucamonga, CA 91730</p>
             </div>
           </motion.div>
 
@@ -74,8 +74,8 @@ export function MapSection() {
                   <div>
                     <div className="font-semibold text-gray-900">Address</div>
                     <div className="text-gray-600">
-                      123 Sports Ave<br />
-                      City, State 12345
+                      10838 Bellcourt<br />
+                      Rancho Cucamonga, CA 91730
                     </div>
                   </div>
                 </div>
@@ -85,8 +85,8 @@ export function MapSection() {
                   <div>
                     <div className="font-semibold text-gray-900">Hours</div>
                     <div className="text-gray-600">
-                      Monday - Friday: 6:00 AM - 10:00 PM<br />
-                      Saturday - Sunday: 8:00 AM - 8:00 PM
+                      Appointment Only<br />
+                      <a href="/booking" className="text-primary hover:underline">Book online anytime</a>
                     </div>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ export function MapSection() {
                     <div className="font-semibold text-gray-900">Parking</div>
                     <div className="text-gray-600">
                       Free parking available on-site<br />
-                      Accessible parking spaces provided
+                      Easy access from major roads
                     </div>
                   </div>
                 </div>
@@ -113,9 +113,9 @@ export function MapSection() {
                 <div className="flex items-start">
                   <Navigation className="h-5 w-5 text-primary mr-3 mt-1" />
                   <div>
-                    <div className="font-medium text-gray-900">From Downtown</div>
+                    <div className="font-medium text-gray-900">From I-10 Freeway</div>
                     <div className="text-sm text-gray-600">
-                      Take Main Street north for 2 miles, turn right on Sports Ave
+                      Exit at Archibald Ave, head north to Bellcourt
                     </div>
                   </div>
                 </div>
@@ -123,9 +123,9 @@ export function MapSection() {
                 <div className="flex items-start">
                   <Navigation className="h-5 w-5 text-primary mr-3 mt-1" />
                   <div>
-                    <div className="font-medium text-gray-900">From Highway 101</div>
+                    <div className="font-medium text-gray-900">From I-15 Freeway</div>
                     <div className="text-sm text-gray-600">
-                      Exit at Sports Avenue, facility is 0.5 miles on the left
+                      Exit at Foothill Blvd, head west to Bellcourt
                     </div>
                   </div>
                 </div>
@@ -133,9 +133,9 @@ export function MapSection() {
                 <div className="flex items-start">
                   <Navigation className="h-5 w-5 text-primary mr-3 mt-1" />
                   <div>
-                    <div className="font-medium text-gray-900">Public Transit</div>
+                    <div className="font-medium text-gray-900">From Ontario Airport</div>
                     <div className="text-sm text-gray-600">
-                      Bus routes 15 and 23 stop within 2 blocks of our facility
+                      Take I-10 west to Archibald Ave, approximately 15 minutes
                     </div>
                   </div>
                 </div>
@@ -145,7 +145,7 @@ export function MapSection() {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="https://maps.google.com"
+                href="https://maps.google.com/maps?q=10838+Bellcourt+Rancho+Cucamonga+CA+91730"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 bg-primary text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-primary/90 transition-colors"
@@ -153,10 +153,10 @@ export function MapSection() {
                 Get Directions
               </a>
               <a
-                href="tel:(555)123-4567"
+                href="tel:909-287-1268"
                 className="flex-1 border border-primary text-primary px-6 py-3 rounded-lg font-semibold text-center hover:bg-primary hover:text-white transition-colors"
               >
-                Call for Directions
+                Call 909-287-1268
               </a>
             </div>
           </motion.div>
@@ -174,27 +174,27 @@ export function MapSection() {
               Nearby Amenities
             </h3>
             <p className="text-gray-600">
-              Conveniently located near restaurants, hotels, and other services
+              Conveniently located in Rancho Cucamonga with easy access to dining and shopping
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg p-4 text-center">
               <div className="text-2xl mb-2">🍽️</div>
-              <h4 className="font-semibold text-gray-900 mb-1">Restaurants</h4>
-              <p className="text-sm text-gray-600">Multiple dining options within walking distance</p>
+              <h4 className="font-semibold text-gray-900 mb-1">Dining</h4>
+              <p className="text-sm text-gray-600">Multiple restaurants and fast food options nearby</p>
             </div>
             
             <div className="bg-white rounded-lg p-4 text-center">
-              <div className="text-2xl mb-2">🏨</div>
-              <h4 className="font-semibold text-gray-900 mb-1">Hotels</h4>
-              <p className="text-sm text-gray-600">Several hotels nearby for out-of-town visitors</p>
-            </div>
-            
-            <div className="bg-white rounded-lg p-4 text-center">
-              <div className="text-2xl mb-2">🛍️</div>
+              <div className="text-2xl mb-2">🏪</div>
               <h4 className="font-semibold text-gray-900 mb-1">Shopping</h4>
-              <p className="text-sm text-gray-600">Shopping centers and stores close by</p>
+              <p className="text-sm text-gray-600">Victoria Gardens and other shopping centers close by</p>
+            </div>
+            
+            <div className="bg-white rounded-lg p-4 text-center">
+              <div className="text-2xl mb-2">✈️</div>
+              <h4 className="font-semibold text-gray-900 mb-1">Airport Access</h4>
+              <p className="text-sm text-gray-600">15 minutes from Ontario International Airport</p>
             </div>
           </div>
         </motion.div>
